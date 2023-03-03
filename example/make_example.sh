@@ -2,12 +2,14 @@
 
 mkdir -p conf
 
-echo "test_params:
+cat << YML > conf/params.yml
+test_params:
   a: 2
   b: 7
-" > conf/params.yml
+YML
 
-echo "import utils
+cat << PYSCRIPT > run.py
+import utils
 
 
 @utils.params.add_args(params_file="conf/params.yml", root_key="/test_params")
@@ -17,7 +19,6 @@ def run(a, b):
 
 if __name__ == "__main__":
     run()
-
-" > example.py
+PYSCRIPT
 
 echo "Done."
