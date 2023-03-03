@@ -13,6 +13,7 @@ pip install git+https://github.com/tkosht/utils.git
 
 ```
 git clone https://github.com/tkosht/utils.git
+cd utils && pip install .
 ```
 
 
